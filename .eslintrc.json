@@ -1,0 +1,6 @@
+{
+  "extends": ["@darksinge"],
+  "rules": {
+    "prettier/prettier": "error"
+  }
+}
