@@ -8,8 +8,10 @@ export interface Collection<T extends { id: string }> {
 
 export interface User {
   id: string
+  email: string
   name: string
   age: number
+  role?: 'staff' | 'admin'
 }
 
 export interface Db {
