@@ -11,5 +11,5 @@ type MethodB = (
 ) => void
 
 export const methodB: MethodB = (a, c) => {
-  a.methodA(c)
+  a.methodA(c, { methodB: () => void 0 })
 }

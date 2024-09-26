@@ -1,3 +1,8 @@
+/**
+ * NOTE: This module was refactored with the same principles used in the
+ * refactored code in `./user.service.ts`, but uses a function instead of a
+ * class. The syntax is different, but the approach of using DI is the same.
+ */
 import { Db, User } from '../db'
 import { v4 as uuid } from 'uuid'
 

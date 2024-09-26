@@ -15,8 +15,18 @@
  * errors go away. Run the code. You should get a "Maximum
  * call stack exceeded" error.
  */
+
+/**
+ * HINT: this dependency should be removed from the global
+ * scope and passed as an argument to `methodC` instead.
+ */
 import { methodB } from './b'
 
-export const methodC = (/* TODO: Try injecting the dependency here */) => {
-  methodB(/* This expects two arguments */)
+/*
+ * TODO: update this type definition
+ */
+type MethodC = any
+
+export const methodC: MethodC = () => {
+  methodB()
 }

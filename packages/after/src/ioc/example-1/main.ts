@@ -1,9 +1,23 @@
-import { A } from './a'
-import { C } from './c'
-import { B } from './b'
+import * as A from './a'
+import * as C from './c'
 
-// Typescript catches the circular dependency. Even though it's not obvious
-// that a circular dependency was being created from within a.ts, b.ts, and
-// c.ts, once we try composing the three functions together, Typescript quickly
-// shows we can't create an instance of any object without the other two.
-console.log(A(C(B(A(/* ... */)))))
+/**
+ * TODO: The problems in this file can't be addressed until
+ * the issues in `./c.ts` have been fixed. Once `./c.ts` has
+ * been refactored, the typescript errors in this file
+ * should surface.
+ *
+ * NOTE: It's not obvious that a circular dependency exists
+ * between `a.ts`, `b.ts`, and `c.ts`, until we try
+ * composing the three functions together. As soon as we do,
+ * Typescript quickly shows we can't invoke any one of the
+ * functions without one of the other two. The only way to
+ * resolve this issue is to address the underlying circular
+ * dependency.
+ *
+ * Also note that this infinite loop exists in the "before"
+ * code, but the problem doesn't surface until runtime. By
+ * explicitly specifying dependencies, we can catch the
+ * issue early using static analysis.
+ */
+A.methodA(C)

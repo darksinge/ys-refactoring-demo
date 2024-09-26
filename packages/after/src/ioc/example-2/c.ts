@@ -1,12 +1,12 @@
 import { B } from './b'
 
 export interface C {
-  method(): void
+  call(): void
 }
 
 export const C = (b: B): C => ({
-  method() {
+  call() {
     console.log('called c')
-    b.method()
+    b.call()
   },
 })
