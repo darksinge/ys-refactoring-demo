@@ -1,4 +1,4 @@
-import { db, User } from './db'
+import { db, User } from '../db'
 import { v4 as uuid } from 'uuid'
 
 await db.connect()

@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/ban-types, @typescript-eslint/no-explicit-any */
-import { User } from './db'
+import { User } from '../db'
 import { UserService } from './user.service'
 
 declare function getSensitiveInfoAboutUser(user: User): Promise<any>

@@ -1,4 +1,4 @@
-import { Db, User } from './db'
+import { Db, User } from '../db'
 import { v4 as uuid } from 'uuid'
 
 declare function isValidEmail(email: string): boolean

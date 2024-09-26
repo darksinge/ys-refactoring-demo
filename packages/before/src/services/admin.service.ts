@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { User } from './db'
+import { User } from '../db'
 
 declare function getSensitiveInfoAboutUser(user: User): Promise<any>
 declare function userHasAdminPermissions(role: User['role']): Promise<boolean>
